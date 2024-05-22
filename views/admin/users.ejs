@@ -1,0 +1,14 @@
+<%- include('./includes/head.ejs'); %>
+</head>
+<body>
+<div>
+    <h1>Users</h1>
+    <ol>
+        <% for (let index = 0; index < allUsers.length; index++) { %>
+            <li><%= allUsers[index].email %></li>
+            <li><a href="/admin/user-edit-form/<%= allUsers[index].id %>">Edit</a></li>
+            <li><a href="/admin/user-delete-form/<%= allUsers[index].id %>">Delete</a></li>
+        <% } %>
+    </ol>
+</div>
+<%- include('./includes/footer.ejs'); %>

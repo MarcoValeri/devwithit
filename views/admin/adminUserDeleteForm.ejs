@@ -1,0 +1,17 @@
+<%- include('./includes/head.ejs'); %>
+</head>
+<body>
+<div>
+    <h1><%= pageTitle; %></h1>
+    <form action="/admin/user-delete-form/<%= deleteUserAdminId %>" method="POST">
+        <div>
+            <div>
+                <input type="hidden" name="deleteUserAdminId" value="<%= deleteUserAdminId %>" />
+                <input type="hidden" name="deleteUserAdminEmail" value="<%= deleteUserAdminEmail %>" />
+                <input type="hidden" name="deleteUserAdminPassword" value="<%= deleteUserAdminPassword %>" />
+                <input type="submit" value="Delete" />
+            </div>
+        </div>
+    </form>
+</div>
+<%- include('./includes/footer.ejs'); %>

@@ -1,0 +1,20 @@
+<%- include('./includes/head.ejs'); %>
+</head>
+<body>
+<div>
+    <h1>Add new user</h1>
+    <form action="/admin/user-add-new-form" method="POST">
+        <div>
+            <div>
+                <input type="email" name="userAdminEmail" />
+            </div>
+            <div>
+                <input type="password" name="userAdminPassword" />
+            </div>
+            <div>
+                <input type="submit" value="Add new admin user" />
+            </div>
+        </div>
+    </form>
+</div>
+<%- include('./includes/footer.ejs'); %>

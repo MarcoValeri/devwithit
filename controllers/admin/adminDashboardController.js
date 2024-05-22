@@ -1,7 +1,11 @@
 const adminDashboardController = (req, res, next) => {
-    res.render('./admin/dashboard', {
-        pageTitle: 'Admin Dashboard',
-    })
+    if (req.session.adminUser) {
+        res.render('./admin/dashboard', {
+            pageTitle: 'Admin Dashboard',
+        })
+    } else {
+        res.redirect('/admin/login');
+    }
 }
 
 export { adminDashboardController };

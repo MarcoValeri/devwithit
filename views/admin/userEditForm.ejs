@@ -1,0 +1,21 @@
+<%- include('./includes/head.ejs'); %>
+</head>
+<body>
+<div>
+    <h1><%= pageTitle; %></h1>
+    <form action="/admin/user-edit-form/<%= userAdminId %>" method="POST">
+        <div>
+            <div>
+                <input type="email" name="userAdminEmail" value="<%= userAdminEmail %>" />
+                <input type="hidden" name="userAdminId" value="<%= userAdminId %>" />
+            </div>
+            <div>
+                <input type="password" name="userAdminPassword" value="<%= userAdminPassword %>" />
+            </div>
+            <div>
+                <input type="submit" value="Edit" />
+            </div>
+        </div>
+    </form>
+</div>
+<%- include('./includes/footer.ejs'); %>

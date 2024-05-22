@@ -1,1 +1,12 @@
-<h1><%= pageTitle %></h1>
+<%- include('./includes/head.ejs'); %>
+</head>
+<body>
+<div>
+    <div>
+        <h1>Dashboard</h1>
+        <a href="/admin/login">Login</a>
+        <a href="/admin/users">Users</a>
+        <a href="/admin/user-add-new-form">User add new</a>
+    </div>
+</div>
+<%- include('./includes/footer.ejs'); %>
